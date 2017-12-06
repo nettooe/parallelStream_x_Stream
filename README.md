@@ -2,7 +2,13 @@
 Apresenta um teste de performance que compara parallelstream e stream do Java 8.
 
 ## Qual a diferença?
-o a diferenca entrea parallelStream e stream  que o primeiro utiliza recursos de Threads ao percorrer uma lista e o segundo é sequencial. Com isto a diferença de desempenho tende a aumentar conforme a quantidades de processadores (cores) disponíveis para a JVM.
+A diferenca entre parallelStream e stream é que o primeiro utiliza recursos de Threads ao percorrer uma lista e o segundo é sequencial. Com isto a diferença de desempenho tende a aumentar conforme a quantidades de processadores (cores) disponíveis para a JVM.
+
+## Quando devemos utilizar
+parallelStream - em casos em que se dispõe de mais de 1 core para processamento de ítens de uma lista, onde cada ítem demanda algum tempo para processar. Também é indicado para casos em que cadas processamento pode ter tempos diferentes de execução.
+stream - em casos onde o tamanho de uma lista com ítens a processar é pequeno e o processamento de cada ítem é simples ou não envolve cálculos.
+
+Em todos os contextos recomendo um exercício de testes. Pois cheguei a me deparar com casos em que o stream chega a ser mais rápido que o parallelStream, pois o tempo que a JVM demora para alocar um core para realizar o processamento pode impactar na performance esperada.
 
 ### Instalando e executando
 Para instalar e executar o projeto localmente, basta [clonar o projeto](https://help.github.com/articles/cloning-a-repository/) e executar. Para isto, abra o terminal no seu Linux e execute os comandos:
