@@ -21,7 +21,7 @@ Ao final desta execução, serão apresentados resultados de processamento semel
 Dados:
 
 quantidade    parallelStream    Stream
-100    355    140/
+100    355    140<br/>
 200    112    215
 300    159    307
 400    147    457
