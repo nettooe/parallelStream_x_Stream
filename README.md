@@ -101,3 +101,5 @@ quantidade    parallelStream    Stream
 7800    2506    4624
 7900    3580    4220
 8000    3627    4125
+
+
